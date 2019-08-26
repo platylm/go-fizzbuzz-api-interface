@@ -7,3 +7,7 @@ type FizzBuzzService interface {
 type FizzBuzz struct {
 
 }
+
+func (fizzbuzz FizzBuzz) GetFizzBuzz(number int) string {
+	return "fizz"
+}
