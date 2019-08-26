@@ -1,9 +1,9 @@
 package api_test
 
 import (
-	"github.com/stretchr/testify/assert"
-	"github.com/gin-gonic/gin"
 	"fizzbuzz/api"
+	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"net/http/httptest"
 	"strings"
