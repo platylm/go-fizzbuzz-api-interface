@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func main(){
+func main() {
 	host := flag.String("host", "3000", "start api host port")
 	flag.Parse()
 	route := gin.Default()

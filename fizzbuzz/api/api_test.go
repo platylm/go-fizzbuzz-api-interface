@@ -10,7 +10,7 @@ import (
 	"testing"
 )
 
-func Test_FizzBuzz_Input_3_Should_Be_Fizz(t *testing.T){
+func Test_FizzBuzz_Input_3_Should_Be_Fizz(t *testing.T) {
 	expected := `{"message":"fizz"}`
 	requestBody := `{"number":3}`
 	request := httptest.NewRequest("POST", "/api/v1/fizzbuzz", strings.NewReader(requestBody))

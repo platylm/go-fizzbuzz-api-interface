@@ -18,7 +18,7 @@ type FizzBuzzAPI struct {
 	FizzBuzzService service.FizzBuzzService
 }
 
-func (api FizzBuzzAPI) FizzBuzzHandler (context *gin.Context) {
+func (api FizzBuzzAPI) FizzBuzzHandler(context *gin.Context) {
 	var fizzBuzzRequest FizzBuzzRequest
 	err := context.Bind(&fizzBuzzRequest)
 	if err != nil {
@@ -27,6 +27,6 @@ func (api FizzBuzzAPI) FizzBuzzHandler (context *gin.Context) {
 	}
 	number := fizzBuzzRequest.Number
 	message := api.FizzBuzzService.GetFizzBuzz(number)
-	response := FizzBuzzResponse{Message:message}
-	context.JSON(http.StatusOK,response)
+	response := FizzBuzzResponse{Message: message}
+	context.JSON(http.StatusOK, response)
 }
