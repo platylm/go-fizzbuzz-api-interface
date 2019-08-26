@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "b89dfb7c-42be-4312-832c-d81b82eca9b2",
+		"name": "FIzzBuzz API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "The number that modulo by 3 will get 'fizz'",
+			"item": [
+				{
+					"name": "Enter number 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f4064af9-0b09-4499-b78d-d5fc12c3c62a",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message is fizz\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql('fizz');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":3\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/fizzbuzz",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"fizzbuzz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "The number that modulo by 5 will get 'buzz'",
+			"item": [
+				{
+					"name": "Enter number 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5f64615e-ccf2-4c76-9bc1-e705c11a6838",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message is buzz\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql('buzz');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":5\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/fizzbuzz",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"fizzbuzz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "The number that modulo by 3 and 5 will get 'fizzbuzz'",
+			"item": [
+				{
+					"name": "Enter number 15",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "07b5703c-4796-4cf0-8336-07174d79c005",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message is fizzbuzz\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql('fizzbuzz');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":15\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/fizzbuzz",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"fizzbuzz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "The number that can't modulo by 3 or 5 will get same number",
+			"item": [
+				{
+					"name": "Enter number 8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7f05f55-ea40-4882-a224-75d47d7d4711",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Message is '8'\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.message).to.eql('8');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"number\":8\n}"
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/fizzbuzz",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"fizzbuzz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
