@@ -1,5 +1,11 @@
 # go-fizzbuzz-api-interface
 ทดลองเขียน FizzBuzz API โดยใช้ Interface ของภาษา
+| Number | Message  |
+|--------|----------|
+| 3      | fizz     |
+| 5      | buzz     |
+| 8      | 8        |
+| 15     | fizzbuzz |
 
 ## Directory Name
 - ใช้ตัวอักษรพิมพ์เล็กทั้งหมด เช่น
